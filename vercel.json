@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "create-react-app",
-  "installCommand": "corepack enable && pnpm --dir gillz_resume_cv install --frozen-lockfile",
-  "buildCommand": "pnpm --dir gillz_resume_cv build",
+  "installCommand": "corepack enable && corepack prepare pnpm@10.13.1 --activate && pnpm --dir gillz_resume_cv install --frozen-lockfile",
+  "buildCommand": "corepack pnpm@10.13.1 --dir gillz_resume_cv build",
   "outputDirectory": "gillz_resume_cv/build",
   "rewrites": [
     {
