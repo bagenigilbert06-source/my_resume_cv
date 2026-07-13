@@ -13,7 +13,7 @@ export default function Header() {
         </button>
         <div className={`nav-links ${open ? "open" : ""}`}>
           {links.map(link => <a key={link} href={`#${link}`} onClick={() => setOpen(false)}>{link}</a>)}
-          <a className="nav-cta" href="https://docs.google.com/document/d/1OIHassfrQi0i-5y_ugdfkcwUvyNy-ilBZghLLD6Pt_k/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View résumé ↗</a>
+          <a className="nav-cta" href="https://docs.google.com/document/d/1RDwbfRI5gCiI-Fz8tLELkRD38jncq3zTRNo48iA-sSw/export?format=pdf" target="_blank" rel="noopener noreferrer">Download CV ↓</a>
         </div>
       </nav>
     </header>
