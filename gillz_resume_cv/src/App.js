@@ -3,6 +3,7 @@ import Header from "./myComponent/header";
 import HomePage from "./myComponent/homePage";
 import About from "./myComponent/About";
 import Experience from "./myComponent/experience";
+import Services from "./myComponent/services";
 import Education from "./myComponent/education";
 import Skill from "./myComponent/Skill";
 import Achievements from "./myComponent/achievements";
@@ -16,6 +17,7 @@ export default function App() {
         <HomePage />
         <About />
         <Experience />
+        <Services />
         <Education />
         <Skill />
         <Achievements />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const links = ["about", "experience", "education", "skills", "qualities"];
+const links = ["about", "experience", "services", "education", "skills", "qualities"];
 
 export default function Header() {
   const [open, setOpen] = useState(false);

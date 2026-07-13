@@ -8,5 +8,5 @@ const qualities = [
 ];
 
 export default function Achievements() {
-  return <section className="section section-tint" id="qualities"><div className="container"><p className="section-kicker">05 / How I work</p><div className="section-heading"><h2>More than the code</h2><p>The principles I bring to every team and every project.</p></div><div className="qualities-grid">{qualities.map(([number, title, text]) => <article key={title}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>;
+  return <section className="section section-tint" id="qualities"><div className="container"><p className="section-kicker">06 / How I work</p><div className="section-heading"><h2>More than the code</h2><p>The principles I bring to every team and every project.</p></div><div className="qualities-grid">{qualities.map(([number, title, text]) => <article key={title}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>;
 }

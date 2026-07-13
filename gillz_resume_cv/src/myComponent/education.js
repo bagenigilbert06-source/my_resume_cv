@@ -3,7 +3,7 @@ import React from "react";
 export default function Education() {
   return (
     <section className="section" id="education"><div className="container two-column">
-      <div><p className="section-kicker">03 / Education</p><h2>Learning that<br />shaped my craft.</h2></div>
+      <div><p className="section-kicker">04 / Education</p><h2>Learning that<br />shaped my craft.</h2></div>
       <div className="timeline">
         <article><span className="timeline-dot" /><time>Present</time><h3>Computer Science</h3><p>Zetech University</p><p>Building a deeper foundation in computer science, software development, algorithms, and modern computing concepts.</p></article>
         <article><span className="timeline-dot" /><time>2022 — 2023</time><h3>Software Engineering Certificate</h3><p>Moringa School of Technology</p><p>Intensive, hands-on training in full-stack software development and collaborative product delivery.</p></article>

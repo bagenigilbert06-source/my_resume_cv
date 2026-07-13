@@ -43,3 +43,46 @@ footer { padding:110px 0 35px; background:#101916; color:white; }.footer-inner>d
 .skills-section { background:#060d0b; }.skill-grid article { background:var(--surface); border-color:#2b3e37; box-shadow:0 20px 50px rgba(0,0,0,.16); }.skill-grid span { border-color:#40534c; color:#d4ded9; background:rgba(255,255,255,.02); }
 .qualities-grid { border-color:var(--line); }.qualities-grid article { border-color:var(--line); background:rgba(255,255,255,.012); }.qualities-grid article:hover { background:rgba(255,255,255,.03); }
 footer { background:#050a08; }.footer-inner .button { background:var(--accent); color:#1b0d09; }.footer-bottom { border-color:var(--line); }
+
+.services-section { background:#0a1411; }
+.services-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.service-card { min-height:310px; padding:30px; display:flex; flex-direction:column; border-right:1px solid var(--line); border-bottom:1px solid var(--line); transition:background .2s ease,transform .2s ease; }
+.service-card:hover { background:var(--surface); transform:translateY(-3px); }
+.service-number { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.12em; }
+.service-card h3 { font-size:21px; line-height:1.2; margin:38px 0 12px; }
+.service-card>p { color:var(--muted); font-size:14px; line-height:1.65; margin:0 0 24px; }
+.service-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; }
+.service-tags span { padding:6px 9px; color:#bdc9c4; border:1px solid #33463f; border-radius:999px; font-size:10px; text-transform:uppercase; letter-spacing:.07em; }
+.custom-callout { margin-top:36px; padding:32px 36px; display:flex; align-items:center; justify-content:space-between; gap:30px; background:linear-gradient(100deg,var(--surface),#172a23); border:1px solid #2c4139; border-radius:16px; }
+.custom-callout span { color:var(--accent); font-size:11px; text-transform:uppercase; letter-spacing:.12em; }
+.custom-callout h3 { font-size:25px; margin:8px 0 0; }
+@media (max-width:1000px) { .services-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .services-grid { grid-template-columns:1fr; }.service-card { min-height:270px; }.custom-callout { align-items:stretch; flex-direction:column; }.custom-callout .button { width:100%; } }
+
+/* Restrained professional presentation */
+.nav-cta,.button,.experience-card,.service-card { transition:background-color .15s ease,border-color .15s ease,color .15s ease; }
+.hero:before { opacity:.055; }
+.hero-glow { opacity:.07; }
+.hero h1 { font-size:clamp(48px,6vw,78px); line-height:1.04; letter-spacing:-.045em; }
+.portrait-card { transform:none; border-radius:22px; padding:9px; }
+.portrait-card img { border-radius:15px; }
+.floating-note { transform:none; border-radius:8px; }
+.button.primary:hover,.experience-card:hover,.service-card:hover { transform:none; }
+.section { padding:110px 0; }
+.section h2,footer h2 { font-size:clamp(36px,4.3vw,54px); letter-spacing:-.035em; }
+.section-kicker,.experience-card .tag,.service-number { letter-spacing:.1em; }
+.experience-list { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; border:0; }
+.experience-card { display:flex; min-height:330px; padding:28px; flex-direction:column; gap:0; background:#101c18; border:1px solid var(--line); border-radius:10px; }
+.experience-card:hover { padding-left:28px; background:#13211c; border-color:#3a4d46; }
+.experience-card .card-number { margin-bottom:45px; }
+.experience-card h3 { font-size:24px; margin:7px 0 14px; }
+.experience-card p { font-size:14px; line-height:1.65; }
+.experience-card time { margin-top:auto; padding-top:28px; text-align:left; }
+.services-grid { gap:14px; border:0; }
+.service-card { min-height:290px; border:1px solid var(--line); border-radius:10px; background:#0e1a16; }
+.service-card:hover { background:#12201b; border-color:#3a4d46; }
+.qualities-grid { gap:14px; border:0; }
+.qualities-grid article { border:1px solid var(--line); border-radius:10px; }
+.qualities-grid article:hover { background:rgba(255,255,255,.012); }
+.custom-callout { border-radius:10px; }
+@media (max-width:900px) { .experience-list { grid-template-columns:1fr; }.experience-card { min-height:auto; }.experience-card .card-number { margin-bottom:28px; }.experience-card time { margin-top:10px; } }
