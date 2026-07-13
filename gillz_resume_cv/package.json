@@ -2,6 +2,7 @@
   "name": "gillz_resume_cv",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
@@ -17,8 +18,8 @@
     "react-spring": "^7.2.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"

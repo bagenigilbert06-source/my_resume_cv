@@ -1,154 +1,21 @@
-import React, { Component, Fragment } from "react";
-import {
-  AppBar,
-  Typography,
-  Toolbar,
-  Button,
-  IconButton,
-  Drawer,
-  Hidden,
-  List,
-  ListItem,
-  ListItemText
-} from "@material-ui/core";
-import Fab from "@material-ui/core/Fab";
-import MenuIcon from "@material-ui/icons/Menu";
-import { withStyles } from "@material-ui/core/styles";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-//import HomePage from "./homePage";
-const styles = theme => ({
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  },
-  drawerWidth: {
-    width: "auto"
-  },
-  drawerColor: {
-    textAlign: "center"
-  },
-  headerwidth: {
-    width: "100",
-    padding: 0,
-    margin: 0,
-    float: "left"
-  }
-});
+import React, { useState } from "react";
 
-class Header extends Component {
-  state = {
-    open: false
-  };
-  handleMenubutton = () => {
-    this.setState({
-      open: !this.state.open
-    });
-  };
+const links = ["about", "experience", "education", "skills", "qualities"];
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <Fragment>
-        <AppBar
-          className="header-color"
-          position="static"
-          classes={{ positionStatic: classes.headerwidth }}
-        >
-          <Toolbar>
-            <Typography
-              variant="subtitle"
-              color="inherit"
-              style={{ flexGrow: 1 }}
-            >
-              <Button
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-                href="https://docs.google.com/document/d/1OIHassfrQi0i-5y_ugdfkcwUvyNy-ilBZghLLD6Pt_k/edit?usp=sharing"
-              >
-                <i class="fas fa-cloud-download-alt"> DOWNLOAD CV</i>
-              </Button>
-            </Typography>
-            <Hidden mdUp>
-              <IconButton color="inherit" onClick={this.handleMenubutton}>
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
-            <Hidden smDown>
-              <Button
-                href="#about"
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-              >
-                About
-              </Button>
-              <Button
-                href="#experience"
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-              >
-                Experience
-              </Button>
-              <Button
-                href="#education"
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-              >
-                Education
-              </Button>
-              <Button
-                href="#skills"
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-              >
-                Skills
-              </Button>
-
-              <Button
-                href="#achievements"
-                color="inherit"
-                style={{ fontSize: "1rem" }}
-              >
-                Qualities
-              </Button>
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-
-        <Hidden mdUp>
-          <div>
-            <Drawer
-              anchor="top"
-              open={this.state.open}
-              classes={{ paperAnchorTop: classes.drawerColor }}
-              style={{ color: "yellow" }}
-            >
-              <div className={classes.drawerWidth}>
-                <IconButton onClick={this.handleMenubutton}>
-                  <KeyboardArrowUpIcon />
-                </IconButton>
-
-                <List>
-                  {[
-                    "about",
-                    "experience",
-                    "education",
-                    "skills",
-                    "Qualities"
-                  ].map((text, index) => (
-                    <ListItem button key={index} className="menu_btn">
-                      <Button href={`#${text}`} onClick={this.handleMenubutton}>
-                        <ListItemText primary={text} />
-                      </Button>
-                    </ListItem>
-                  ))}
-                </List>
-              </div>
-            </Drawer>
-          </div>
-        </Hidden>
-      </Fragment>
-    );
-  }
+export default function Header() {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="site-header">
+      <nav className="nav container-wide" aria-label="Main navigation">
+        <a className="brand" href="#home" aria-label="Gilbert Bageni home">GB<span>.</span></a>
+        <button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation">
+          <span /><span />
+        </button>
+        <div className={`nav-links ${open ? "open" : ""}`}>
+          {links.map(link => <a key={link} href={`#${link}`} onClick={() => setOpen(false)}>{link}</a>)}
+          <a className="nav-cta" href="https://docs.google.com/document/d/1OIHassfrQi0i-5y_ugdfkcwUvyNy-ilBZghLLD6Pt_k/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View résumé ↗</a>
+        </div>
+      </nav>
+    </header>
+  );
 }
-
-export default withStyles(styles)(Header);

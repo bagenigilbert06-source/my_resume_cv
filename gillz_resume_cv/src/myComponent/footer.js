@@ -1,37 +1,5 @@
-import React, { Component, Fragment } from "react";
-import { Paper, Typography } from "@material-ui/core";
+import React from "react";
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <div className="footer">
-        <div>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="center"
-            display="inline"
-          >
-            <i class="far fa-copyright">
-              Copyright Rachit. All Rights Reserved
-            </i>
-          </Typography>
-        </div>
-        <div className="footer-a">
-          <a href="https://www.facebook.com/profile.php?id=100086627101609" target="_blank">
-            <i class="fab fa-facebook-f " />
-          </a>
-          <a href="https://twitter.com/bert_wilber" target="_blank">
-            <i class="fab fa-twitter" />
-          </a>
-          <a href="https://www.instagram.com/gilley_jr/" target="_blank">
-            <i class="fab fa-instagram" />
-          </a>
-          <a href="mailto: bagenigilbert@gmail.com">
-            <i class="fas fa-envelope" />
-          </a>
-        </div>
-      </div>
-    );
-  }
+export default function Footer() {
+  return <footer><div className="container footer-inner"><div><p className="section-kicker">Have a project in mind?</p><h2>Let’s build something<br /><em>worth using.</em></h2><a className="button primary" href="mailto:bagenigilbert@gmail.com">Start a conversation ↗</a></div><div className="footer-bottom"><p>© {new Date().getFullYear()} Gilbert Bageni</p><div><a href="https://github.com/gilbert2003-beep" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gilbert-bageni-9413242a3/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#home">Back to top ↑</a></div></div></div></footer>;
 }

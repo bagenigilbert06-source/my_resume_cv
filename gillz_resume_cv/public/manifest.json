@@ -1,15 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gilbert Bageni",
+  "name": "Gilbert Bageni — Full Stack Developer",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "WhatsApp Image 2026-07-13 at 05.10.31.jpeg",
+      "sizes": "864x1152",
+      "type": "image/jpeg"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#08110e",
+  "background_color": "#08110e"
 }

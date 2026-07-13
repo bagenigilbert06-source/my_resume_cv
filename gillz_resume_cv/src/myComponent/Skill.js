@@ -1,110 +1,11 @@
 import React from "react";
 
-class Skills extends React.Component {
-  render() {
-    return (
-      <div className="skill_row" id="skills">
-        <h1 className="name-css">
-          <span className="surname">Skills</span>
-        </h1>
-        <div className="wrapper_skill">
-          <div>
-            <p>Tailwind</p>
-            <div className="container">
-              <div
-                className="skills C"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-              90%
-              </div>
-            </div>{" "}
-            <p>Django</p>
-            <div className="container">
-              <div
-                className="skills JAVA"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                60%
-              </div>
-            </div>
-            <p>Html</p>
-            <div className="container">
-              <div
-                className="skills html"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                90%
-              </div>
-            </div>
-            <p>MongoDB</p>
-            <div className="container">
-              <div
-                className="skills css"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                65%
-              </div>
-            </div>
-            <p>JavaScript</p>
-            <div className="container">
-              <div
-                className="skills js"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                75%
-              </div>
-            </div>
-            <p>ReactJS</p>
-            <div className="container">
-              <div
-                className="skills react"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                85%
-              </div>
-            </div>
-            <p>Flask</p>
-            <div className="container">
-              <div
-                className="skills node"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                70%
-              </div>
-            </div>
-            <p>Node.js</p>
-            <div className="container">
-              <div
-                className="skills db"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                65%
-              </div>
-            </div>
-            <p>Python</p>
-            <div className="container">
-              <div
-                className="skills python"
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-              >
-                60%
-              </div>
-            </div>
-          </div>
-          <div />
-        </div>
-      </div>
-    );
-  }
-}
+const groups = [
+  { title: "Frontend", skills: ["JavaScript", "React", "HTML & CSS", "Tailwind CSS", "Angular"] },
+  { title: "Backend", skills: ["Python", "Django", "Flask", "Node.js", "REST APIs"] },
+  { title: "Data & tools", skills: ["MongoDB", "Git & GitHub", "SQL", "Responsive Design", "Agile workflows"] }
+];
 
-export default Skills;
+export default function Skills() {
+  return <section className="section skills-section" id="skills"><div className="container"><p className="section-kicker">04 / Skills</p><div className="section-heading"><h2>Tools I work with</h2><p>A versatile toolkit for taking products from idea to deployment.</p></div><div className="skill-grid">{groups.map(group => <article key={group.title}><h3>{group.title}</h3><div>{group.skills.map(skill => <span key={skill}>{skill}</span>)}</div></article>)}</div></div></section>;
+}
